@@ -3,14 +3,17 @@ package evolution.core;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 import evolution.algorithms.normalize.Polynomial;
 import evolution.algorithms.select.Selector;
 import evolution.algorithms.select.SingleGenNorm;
 import evolution.diagnostics.Log;
 
-public class EvolutionManager {
+public class EvolutionManager implements Serializable {
 
+	private static final long serialVersionUID = 8382034957719596711L;
+	
 	Population pop;
 	Selector selector;
 	Log log;

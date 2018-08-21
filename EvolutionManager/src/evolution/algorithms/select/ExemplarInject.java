@@ -1,7 +1,5 @@
 package evolution.algorithms.select;
 
-import java.util.ArrayList;
-import java.util.EmptyStackException;
 import java.util.List;
 
 import evolution.core.Genome;
@@ -11,14 +9,14 @@ import evolution.diagnostics.Record;
 
 public class ExemplarInject implements Selector{
 
+	private static final long serialVersionUID = 3029697856899884848L;
+	
 	Selector subSelect;
 	List<Genome> exemplars;
 	
-	public ExemplarInject(Selector subSelect, Genome... exemplars) {
+	public ExemplarInject(Selector subSelect, List<Genome> exemplars) {
 		this.subSelect = subSelect;
-		this.exemplars = new ArrayList<>();
-		for (Genome exemplar : exemplars)
-			this.exemplars.add(exemplar);
+		this.exemplars = exemplars;
 	}
 
 	@Override

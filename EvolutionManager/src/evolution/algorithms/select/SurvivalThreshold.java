@@ -4,11 +4,14 @@ import evolution.core.Population;
 import evolution.diagnostics.Log;
 
 public class SurvivalThreshold implements Selector {
-
+	
+	private static final long serialVersionUID = -7208766436101528470L;
+	
 	Selector subSelect;
 	double survivalCf; // Fraction of population to survive each generation
 
 	public SurvivalThreshold(Selector subSelect, double survivalCf) {
+		this.subSelect = subSelect;
 		this.survivalCf = survivalCf;
 	}
 

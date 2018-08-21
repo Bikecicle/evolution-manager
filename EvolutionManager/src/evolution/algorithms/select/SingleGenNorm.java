@@ -8,6 +8,8 @@ import evolution.diagnostics.Record;
 
 public class SingleGenNorm implements Selector {
 
+	private static final long serialVersionUID = -2878502001011632441L;
+	
 	Normalizer normalizer;
 
 	public SingleGenNorm(Normalizer normalizer) {

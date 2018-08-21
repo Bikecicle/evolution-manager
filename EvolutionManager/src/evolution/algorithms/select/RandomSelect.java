@@ -6,6 +6,8 @@ import evolution.diagnostics.Log;
 import evolution.diagnostics.Record;
 
 public class RandomSelect implements Selector {
+	
+	private static final long serialVersionUID = -8178620450388026005L;
 
 	@Override
 	public Population nextGeneration(Population current, int nextSize, Log log) {

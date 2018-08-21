@@ -3,17 +3,12 @@ package evolution.core;
 public class Splicer {
 	
 	public static final float WEIGHT = 0.5f;
-
-	public static Object choose(Object...genes) {
-		double weight = 1.0 / genes.length;
-		double sum = 0;
-		double r = Math.random();
-		for (Object o : genes) {
-			sum += weight;
-			if (sum <= r)
-				return o;
+	
+	public static Object chooseObject(Object o1, Object o2) {
+		if (Math.random() < WEIGHT) {
+			return o1;
 		}
-		return null;
+		return o2;
 	}
 	
 	public static float[] chooseRange(float[] r1, float[] r2) {

@@ -1,9 +1,13 @@
 package evolution.diagnostics;
 
+import java.io.Serializable;
+
 import evolution.core.Genome;
 
-public class Record {
+public class Record implements Serializable {
 
+	private static final long serialVersionUID = -8610307439831040887L;
+	
 	int gen;
 	int id;
 	double score;
